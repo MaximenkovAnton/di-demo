@@ -14,9 +14,8 @@ public class DiDemoApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(DiDemoApplication.class, args);
-		MyController controller = context.getBean("myController", MyController.class);
-		controller.hello();
 
+		System.out.println(context.getBean(MyController.class).sayHello());
 		System.out.println(context.getBean(PropertyInjectionController.class).sayHello());
 		System.out.println(context.getBean(GetterInjectionController.class).sayHello());
 		System.out.println(context.getBean(ConstructorInjectionController.class).sayHello());
