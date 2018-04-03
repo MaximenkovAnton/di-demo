@@ -6,10 +6,11 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class PropertyInjectionController {
+
     @Autowired
-    private GreetingService greetingService;
+    private GreetingService greetingServiceImpl;
 
     public String sayHello(){
-        return greetingService.SayHello();
+        return greetingServiceImpl.SayHello();
     }
 }
